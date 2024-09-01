@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filialies",
+  "info": {
+    "singularName": "filialy",
+    "pluralName": "filialies",
+    "displayName": "Филиал",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "time_to": {
+      "type": "time"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "time_from": {
+      "type": "time"
+    },
+    "tovars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "filials"
+    }
+  }
+}
